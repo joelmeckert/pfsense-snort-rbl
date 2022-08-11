@@ -21,7 +21,18 @@ chown root:unbound /usr/local/bin/snort-rbl.sh
 ## Snort
 - Services => Snort => IP Lists => add the IP lists after downloading the lists once with /usr/local/bin/snort-rbl.sh
 - Interface => IP Rep => Add the blacklist files
-  
+
+### Suppress
+- Optionally, add a snort Suppress list to rate limit events to the log, sample below
+```
+#(spp_reputation) reputation blacklisted, only log select entries
+# if more than 20 in 300 seconds
+event_filter \
+    gen_id 136, sig_id 1, \
+    type threshold, track by_src, \
+    count 20, seconds 300
+```
+
 ## Notes
 - It is not recommended to run the update process frequently, daily is best
 - Many list providers are hammered by frequent updates, designed for FireHOL 1-3
