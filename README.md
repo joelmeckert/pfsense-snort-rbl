@@ -6,7 +6,7 @@ Real-time blacklist update script, parses and removes local and broadcast/multic
   - Add URLs and filenames for real-time blacklists
   - Comment out where not in use, iprepx and curl lines
 - Transfer/copy file to pfSense firewall at /usr/local/bin/snort-rbl.sh
-- Set the permission and user/group ownership
+- Open a shell, set the permission and user/group ownership
 ```
 chmod 755 /usr/local/bin/snort-rbl.sh
 chown root:unbound /usr/local/bin/snort-rbl.sh
