@@ -23,4 +23,5 @@ chown root:unbound /usr/local/bin/snort-rbl.sh
 - Interface => IP Rep => Add the blacklist files
   
 ## Notes
-- It is not recommended to run the update process frequently, daily is best, as many list providers are hammered by frequent updates. Usually daily will suffice, I had been using FireHOL
+- It is not recommended to run the update process frequently, daily is best
+- Many list providers are hammered by frequent updates, daily should suffice, this was designed using FireHOL 1,2,3
