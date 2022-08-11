@@ -6,7 +6,13 @@
 # Download IP lists, parse them with sed and a regular expression, and restart Snort
 # Replace the list entries with the lists that you use, uncomment in URLs, reputation, and curl sections
 
-# Requires /usr/local/etc/rc.d/snort.sh script, which may not be installed by default
+# Place file in /usr/local/bin/snort-rbl.sh
+# chmod 755 /usr/local/bin/snort-rbl.sh
+# chown root:wheel /usr/local/bin/snort-rbl.sh
+
+# Update the URL(s) for the lists as required, comment out lists that are not in use, samples below
+
+# Requires /usr/local/etc/rc.d/snort.sh script, which may not be installed by default, included in repository
 
 # URLs to IP list(s), enter the URLs, uncomment for 2+ lists, and uncomment reputation list
 list1='https://hahordaplanet.ru/badazz/file1.netset'
