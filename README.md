@@ -24,7 +24,7 @@ chown root:unbound /usr/local/bin/snort-rbl.sh
   
 ## Notes
 - It is not recommended to run the update process frequently, daily is best
-- Many list providers are hammered by frequent updates, daily should suffice, this was designed using FireHOL 1,2,3
+- Many list providers are hammered by frequent updates, designed for FireHOL 1-3
 ```
 /usr/local/etc/rc.d
 ```
