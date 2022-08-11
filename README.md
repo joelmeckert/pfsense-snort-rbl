@@ -9,7 +9,7 @@ Real-time blacklist update script, parses and removes local and broadcast/multic
 - Set the permission and user/group ownership
 ```
 chmod 755 /usr/local/bin/snort-rbl.sh
-chgrp root:unbound /usr/local/bin/snort-rbl.sh
+chown root:unbound /usr/local/bin/snort-rbl.sh
 ```
 - Install pfSense cron package
 - Services => cron => Add
