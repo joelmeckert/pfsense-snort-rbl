@@ -9,6 +9,7 @@ Real-time blacklist update script, parses and removes local and broadcast/multic
 - Set the permission and user/group ownership
 ```
 chmod 755 /usr/local/bin/snort-rbl.sh
+chgrp root:unbound /usr/local/bin/snort-rbl.sh
 ```
 - Install pfSense cron package
 - Services => cron => Add
@@ -17,9 +18,9 @@ chmod 755 /usr/local/bin/snort-rbl.sh
   - user (root)
   - /usr/local/bin/snort-rbl.sh
   
-  ## Snort
-  - Services => Snort => IP Lists => add the IP lists after downloading the lists once with /usr/local/bin/snort-rbl.sh
-  - Interface => IP Rep => Add the blacklist files
+## Snort
+- Services => Snort => IP Lists => add the IP lists after downloading the lists once with /usr/local/bin/snort-rbl.sh
+- Interface => IP Rep => Add the blacklist files
   
-  ## Notes
-  It is not recommended to run the update process frequently, daily is best, as many list providers are hammered by frequent updates. Usually daily will suffice, I had been using FireHOL.
+## Notes
+- It is not recommended to run the update process frequently, daily is best, as many list providers are hammered by frequent updates. Usually daily will suffice, I had been using FireHOL
