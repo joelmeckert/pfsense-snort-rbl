@@ -5,21 +5,21 @@ Real-time blacklist update script, parses and removes local and broadcast/multic
 - Modify script
   - Add URLs and filenames for real-time blacklists
   - Comment out where not in use, iprepx and curl lines
-- Transfer/copy file to pfSense firewall at /usr/local/bin/snort-rbl.sh
+- Transfer/copy file to pfSense firewall at /usr/local/bin/rblupdate.sh
 - Open a shell, set the permission and user/group ownership
 ```
-chmod 755 /usr/local/bin/snort-rbl.sh
-chown root:unbound /usr/local/bin/snort-rbl.sh
+chmod 755 /usr/local/bin/rblupdate.sh
+chown root:unbound /usr/local/bin/rblupdate.sh
 ```
 - Install pfSense cron package
 - Services => cron => Add
 - Enter
   - minute, hour, *, *, *
   - user (root)
-  - /usr/local/bin/snort-rbl.sh
+  - /usr/local/bin/rblupdate.sh
   
 ## Snort
-- Services => Snort => IP Lists => add the IP lists after downloading the lists once with /usr/local/bin/snort-rbl.sh
+- Services => Snort => IP Lists => add the IP lists after downloading the lists once with /usr/local/bin/rblupdate.sh
 - Interface => IP Rep => Add the blacklist files
 
 ### Suppress
